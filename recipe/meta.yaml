@@ -51,7 +51,6 @@ test:
     - montreal_forced_aligner.g2p
     - montreal_forced_aligner.ivector
     - montreal_forced_aligner.language_modeling
-    - montreal_forced_aligner.multiprocessing
     - montreal_forced_aligner.transcription
     - montreal_forced_aligner._version
     - montreal_forced_aligner.abc
