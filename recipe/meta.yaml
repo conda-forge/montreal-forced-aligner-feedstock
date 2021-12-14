@@ -1,5 +1,5 @@
 {% set name = "montreal-forced-aligner" %}
-{% set version = "2.0.0b9" %}
+{% set version = "2.0.0b10" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Montreal Forced Aligner-{{ version }}.tar.gz
-  sha256: 57ebd48cfabe352658272c6eb8d8448eb8e998d14fd972de3f16eb9d154f1b1c
+  sha256: ef583378d12b0ffaea06301a070c283d3c57866dd14e04cd123e01d9e2ff13c6
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -28,10 +28,10 @@ requirements:
     - pip
     - kaldi
     - sox
-    - openfst  # [not win and build_platform != target_platform]
-    - baumwelch  # [not win and build_platform != target_platform]
-    - ngram  # [not win and build_platform != target_platform]
-    - pynini  # [not win and build_platform != target_platform]
+    - openfst  # [not win and build_platform == target_platform]
+    - baumwelch  # [not win and build_platform == target_platform]
+    - ngram  # [not win and build_platform == target_platform]
+    - pynini  # [not win and build_platform == target_platform]
     - librosa
     - tqdm
     - requests
@@ -41,7 +41,7 @@ requirements:
   run:
     - python
     - kaldi
-    - pynini  # [not win and build_platform != target_platform]
+    - pynini  # [not win and build_platform == target_platform]
     - sox
     - librosa
     - tqdm
