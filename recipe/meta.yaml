@@ -10,8 +10,8 @@ source:
   sha256: 57ebd48cfabe352658272c6eb8d8448eb8e998d14fd972de3f16eb9d154f1b1c
 
 build:
-  number: 0
-  skip: true  # [py<39]
+  number: 1
+  skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - mfa = montreal_forced_aligner.command_line.mfa:main
