@@ -28,10 +28,10 @@ requirements:
     - pip
     - kaldi
     - sox
-    - openfst  # [not win]
-    - baumwelch  # [not win]
-    - ngram  # [not win]
-    - pynini  # [not win]
+    - openfst  # [not win and build_platform != target_platform]
+    - baumwelch  # [not win and build_platform != target_platform]
+    - ngram  # [not win and build_platform != target_platform]
+    - pynini  # [not win and build_platform != target_platform]
     - librosa
     - tqdm
     - requests
@@ -41,7 +41,7 @@ requirements:
   run:
     - python
     - kaldi
-    - pynini  # [not win]
+    - pynini  # [not win and build_platform != target_platform]
     - sox
     - librosa
     - tqdm
