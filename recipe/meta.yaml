@@ -20,16 +20,12 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
-    - cffi                                   # [build_platform != target_platform]
   host:
     - setuptools
     - setuptools_scm
     - wheel
     - python
     - pip
-  run:
-    - python
     - kaldi
     - sox
     - openfst  # [not win]
@@ -37,7 +33,17 @@ requirements:
     - ngram  # [not win]
     - pynini  # [not win]
     - librosa
-    - numpy
+    - tqdm
+    - requests
+    - colorama
+    - pyyaml
+    - praatio
+  run:
+    - python
+    - kaldi
+    - pynini  # [not win]
+    - sox
+    - librosa
     - tqdm
     - requests
     - colorama
