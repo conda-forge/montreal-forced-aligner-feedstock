@@ -1,5 +1,5 @@
 {% set name = "montreal-forced-aligner" %}
-{% set version = "2.0.0b10" %}
+{% set version = "2.0.0b11" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Montreal Forced Aligner-{{ version }}.tar.gz
-  sha256: ef583378d12b0ffaea06301a070c283d3c57866dd14e04cd123e01d9e2ff13c6
+  sha256: 32d03b0af779edd058a5078fa18d6958649178781bee485524cd4fff80653974
 
 build:
   number: 0
@@ -36,7 +36,10 @@ requirements:
     - tqdm
     - requests
     - colorama
+    - ansiwrap
     - pyyaml
+    - jsonlines
+    - biopython
     - praatio
   run:
     - python
@@ -47,7 +50,10 @@ requirements:
     - tqdm
     - requests
     - colorama
+    - ansiwrap
     - pyyaml
+    - biopython
+    - jsonlines
     - praatio
 
 test:
