@@ -311,8 +311,9 @@ online2_bins="""online2-wav-gmm-latgen-faster apply-cmvn-online
 
 if __name__ == '__main__':
     check_outputs(openfst_bins)
-    check_outputs(ngram_bins)
-    check_outputs(baumwelch_bins)
+    if sys.platform != 'win32':
+        check_outputs(ngram_bins)
+        check_outputs(baumwelch_bins)
     check_outputs(bins)
     check_outputs(chain_bins)
     check_outputs(feat_bins)
