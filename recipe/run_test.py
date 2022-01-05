@@ -12,7 +12,7 @@ cuda_version = os.environ.get('cuda_compiler_version', None)
 try:
     float(cuda_version)
     test_cuda = True
-except ValueError:
+except (TypeError, ValueError):
     test_cuda = False
 
 if test_cuda:
