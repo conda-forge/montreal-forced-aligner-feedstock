@@ -42,6 +42,7 @@ requirements:
     - biopython
     - praatio
     - sqlalchemy
+    - dataclassy
   run:
     - python
     - kaldi
@@ -60,6 +61,7 @@ requirements:
     - jsonlines
     - praatio
     - sqlalchemy
+    - dataclassy
 
 test:
   imports:
