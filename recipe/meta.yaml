@@ -41,13 +41,13 @@ requirements:
     - colorama
     - ansiwrap
     - pyyaml
-    - biopython=1.79
+    - biopython =1.79
     - praatio
-    - sqlalchemy>=2.0
+    - sqlalchemy >=2.0
     - dataclassy
     - numba
     - kneed
-    - matplotlib
+    - matplotlib-base
     - seaborn
     - pgvector
     - pgvector-python
@@ -71,13 +71,13 @@ requirements:
     - colorama
     - ansiwrap
     - pyyaml
-    - biopython=1.79
+    - biopython =1.79
     - praatio
-    - sqlalchemy>=2.0
+    - sqlalchemy >=2.0
     - dataclassy
     - numba
     - kneed
-    - matplotlib
+    - matplotlib-base
     - seaborn
     - pgvector
     - pgvector-python
