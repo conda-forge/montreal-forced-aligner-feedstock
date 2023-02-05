@@ -54,6 +54,7 @@ requirements:
     - postgresql
     - hdbscan
     - psycopg2
+    - click
   run:
     - python
     - kaldi
@@ -84,6 +85,7 @@ requirements:
     - postgresql
     - hdbscan
     - psycopg2
+    - click
 
 test:
   imports:
