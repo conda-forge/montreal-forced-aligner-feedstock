@@ -1,5 +1,5 @@
 {% set name = "montreal-forced-aligner" %}
-{% set version = "2.2.0" %}
+{% set version = "2.0.6" %}
 
 package:
   name: {{ name }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Montreal Forced Aligner-{{ version }}.tar.gz
-  sha256: 13cc43f581f2a7b2f8abf987fd5e08ff19bf587307afc744ae861c808cd6cf31
+  sha256: e3a09186d1836df96ab4f28db212cd95684509b2c86328bdb8aa3f9d9ebd972b
 
 build:
-  number: 0
+  number: 3
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - mfa = montreal_forced_aligner.command_line.mfa:mfa_cli
+    - mfa = montreal_forced_aligner.command_line.mfa:main
 
 requirements:
   build:
@@ -41,20 +41,10 @@ requirements:
     - colorama
     - ansiwrap
     - pyyaml
-    - biopython =1.79
-    - praatio =6.0.0
-    - sqlalchemy >=2.0
+    - biopython  =1.79
+    - praatio =5.1.1
+    - sqlalchemy =1.4.46
     - dataclassy
-    - numba
-    - kneed
-    - matplotlib-base
-    - seaborn
-    - pgvector
-    - pgvector-python
-    - postgresql
-    - hdbscan
-    - psycopg2
-    - click
   run:
     - python
     - kaldi
@@ -72,39 +62,23 @@ requirements:
     - colorama
     - ansiwrap
     - pyyaml
-    - biopython =1.79
-    - praatio =6.0.0
-    - sqlalchemy >=2.0
+    - biopython  =1.79
+    - praatio =5.1.1
+    - sqlalchemy =1.4.46
     - dataclassy
-    - numba
-    - kneed
-    - matplotlib-base
-    - seaborn
-    - pgvector
-    - pgvector-python
-    - postgresql
-    - hdbscan
-    - psycopg2
-    - click
 
 test:
-  commands:
-    - mfa --help
   imports:
     - montreal_forced_aligner
     - montreal_forced_aligner.acoustic_modeling
     - montreal_forced_aligner.alignment
     - montreal_forced_aligner.command_line
     - montreal_forced_aligner.corpus
-    - montreal_forced_aligner.diarization
     - montreal_forced_aligner.dictionary
     - montreal_forced_aligner.g2p
     - montreal_forced_aligner.ivector
     - montreal_forced_aligner.language_modeling
-    - montreal_forced_aligner.online
     - montreal_forced_aligner.transcription
-    - montreal_forced_aligner.vad
-    - montreal_forced_aligner.validation
     - montreal_forced_aligner._version
     - montreal_forced_aligner.abc
     - montreal_forced_aligner.config
@@ -112,8 +86,11 @@ test:
     - montreal_forced_aligner.exceptions
     - montreal_forced_aligner.helper
     - montreal_forced_aligner.models
+    - montreal_forced_aligner.segmenter
+    - montreal_forced_aligner.speaker_classifier
     - montreal_forced_aligner.textgrid
     - montreal_forced_aligner.utils
+    - montreal_forced_aligner.validation
 
 about:
   home: https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner
