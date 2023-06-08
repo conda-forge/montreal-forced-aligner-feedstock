@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Montreal Forced Aligner-{{ version }}.tar.gz
-  sha256: c1a4db6018d42c7ec5fe8be7764ff81cb9015c2cb67d482b79f4c635f248caf3
+  sha256: f9d4a4fbe677a5db662b7b7afd2fa4f19af603594109422f54e82ca089321873
 
 build:
   number: 0
