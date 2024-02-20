@@ -43,8 +43,6 @@ requirements:
     - dataclassy
     - numba
     - kneed
-    - matplotlib-base
-    - seaborn
     - pgvector
     - pgvector-python
     - postgresql
