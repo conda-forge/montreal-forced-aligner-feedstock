@@ -16,7 +16,7 @@ build:
   entry_points:
     - mfa = montreal_forced_aligner.command_line.mfa:mfa_cli
   run_exports:
-    - {{ pin_subpackage('montreal_forced_aligner', max_pin='x.x.x') }}
+    - {{ pin_subpackage('montreal-forced-aligner', max_pin='x.x.x') }}
 
 requirements:
   host:
