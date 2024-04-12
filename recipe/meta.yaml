@@ -61,6 +61,7 @@ requirements:
 test:
   commands:
     - mfa --help
+    - mfa_update
   imports:
     - montreal_forced_aligner
     - montreal_forced_aligner.acoustic_modeling
