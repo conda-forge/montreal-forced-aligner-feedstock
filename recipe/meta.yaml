@@ -1,5 +1,5 @@
 {% set name = "montreal-forced-aligner" %}
-{% set version = "3.1.0" %}
+{% set version = "3.1.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name | replace("-", "_") }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9e1791ca0a4ee781db0eb1e9ce6299bd69cbb0c554d5ca755dca6b8c3ade0407
+  sha256: 54b154c45660047746f7f89383c3ba9df1def56b5c0f4db09d9344db3b88271b
 
 build:
   number: 0
