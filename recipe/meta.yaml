@@ -62,11 +62,13 @@ requirements:
 test:
   requires:
     - pytest
+  source_files:
+    - tests
   commands:
     - mfa --help
     - mfa_update
     - mfa server init -p test
-    - pytest
+    - pytest tests
     - mfa server stop -p test
   imports:
     - montreal_forced_aligner
