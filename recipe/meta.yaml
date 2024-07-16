@@ -1,5 +1,6 @@
 {% set name = "montreal-forced-aligner" %}
 {% set version = "3.1.3" %}
+{% set kalpy_version = "0.6.5" %}
 
 package:
   name: {{ name }}
@@ -10,7 +11,7 @@ source:
   sha256: 5e50b1c586fd0169b804f2036762a1304d75eaf5b22183591f7155b205f0ef21
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -54,14 +55,25 @@ requirements:
     - scikit-learn <1.3
     - rich
     - rich-click
-    - kalpy =0.6.4=cpu*
+    - kalpy ={{ kalpy_version }}=cpu*
   run_constrained:
-    - kalpy
+    - kalpy ={{ kalpy_version }}=cpu*
 
 test:
+  requires:
+    - pytest
+    - mock
+    - pytest-mypy
+    - pytest-cov
+    - pytest-timeout
+  source_files:
+    - tests
   commands:
     - mfa --help
     - mfa_update
+    - mfa server init -p test
+    - pytest tests/test_acoustic_modeling.py
+    - mfa server stop -p test
   imports:
     - montreal_forced_aligner
     - montreal_forced_aligner.acoustic_modeling
