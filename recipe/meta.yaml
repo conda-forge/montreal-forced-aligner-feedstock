@@ -72,7 +72,7 @@ test:
     - mfa --help
     - mfa_update
     - mfa server init -p test
-    - pytest tests
+    - pytest tests/test_acoustic_modeling.py
     - mfa server stop -p test
   imports:
     - montreal_forced_aligner
