@@ -62,6 +62,10 @@ requirements:
 test:
   requires:
     - pytest
+    - mock
+    - pytest-mypy
+    - pytest-cov
+    - pytest-timeout
   source_files:
     - tests
   commands:
