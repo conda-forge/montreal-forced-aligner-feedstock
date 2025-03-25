@@ -1,5 +1,5 @@
 {% set name = "montreal-forced-aligner" %}
-{% set version = "3.2.1" %}
+{% set version = "3.2.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name | replace("-", "_") }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c77e31774c8275d9480119ff2d6f55ecc286240006314783267f2d9bb096b64a
+  sha256: 4f2ea19bfc400c501e1dbc63285ad1141e71d26777134d237099fffcfa47a29f
 
 build:
   number: 0
@@ -39,7 +39,7 @@ requirements:
     - tqdm
     - requests
     - pyyaml
-    - biopython =1.79
+    - biopython
     - praatio =6.0.0
     - sqlalchemy >=2.0
     - dataclassy
