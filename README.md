@@ -153,6 +153,3 @@ Feedstock Maintainers
 
 * [@mmcauliffe](https://github.com/mmcauliffe/)
 
-
-<!-- dummy commit to enable rerendering -->
-
