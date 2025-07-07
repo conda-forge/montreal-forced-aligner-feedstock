@@ -10,7 +10,7 @@ source:
   sha256: 252e41aad2752609a76ffb31b5c2ae252e351e5627d5dab4f333b27629c9835c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -40,7 +40,7 @@ requirements:
     - requests
     - pyyaml
     - biopython
-    - praatio =6.0.0
+    - praatio >=6.0.0
     - sqlalchemy >=2.0
     - dataclassy
     - numba
