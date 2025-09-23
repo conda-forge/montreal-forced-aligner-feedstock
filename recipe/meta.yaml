@@ -54,7 +54,7 @@ requirements:
     - scikit-learn
     - rich
     - rich-click
-    - kalpy >= 0.8
+    - kalpy >=0.8
 
 test:
   requires:
