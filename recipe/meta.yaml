@@ -1,4 +1,5 @@
 {% set name = "montreal-forced-aligner" %}
+{% set kaldi_version = "5.5.1172" %}
 {% set version = "3.3.9" %}
 
 package:
@@ -26,7 +27,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - kaldi
+    - kaldi {{ kaldi_version }} cpu*
     - pynini
     - openfst
     - baumwelch
@@ -39,10 +40,8 @@ requirements:
     - tqdm
     - requests
     - pyyaml
-    - biopython
     - praatio >=6.0.0
     - sqlalchemy >=2.0
-    - dataclassy
     - numba
     - kneed
     - pgvector
@@ -54,7 +53,7 @@ requirements:
     - scikit-learn
     - rich
     - rich-click
-    - kalpy >=0.8
+    - kalpy >=0.9
 
 test:
   requires:
