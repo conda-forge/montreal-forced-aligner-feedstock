@@ -11,7 +11,7 @@ source:
   sha256: 3ae073bafc08193cb31b1f635551330a6337790e8b32bc44f1c19a6d9aa5ecf6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -27,7 +27,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - kaldi {{ kaldi_version }} cpu*
+    - kaldi {{ kaldi_version }}
     - pynini
     - openfst
     - baumwelch
