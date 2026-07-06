@@ -53,7 +53,9 @@ requirements:
     - scikit-learn
     - rich
     - rich-click
-    - kalpy >=0.9
+    - kalpy >=0.10
+    - huggingface_hub
+    - jinja2
 
 test:
   requires:
