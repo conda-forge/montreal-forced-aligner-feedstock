@@ -1,6 +1,6 @@
 {% set name = "montreal-forced-aligner" %}
 {% set kaldi_version = "5.5.1172" %}
-{% set version = "3.4.0" %}
+{% set version = "3.4.1" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name | replace("-", "_") }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3284d429ace291077feb22bc53df5613a1a5c1ce00b9266d2e456a60646af76d
+  sha256: 8b6f0ec049452b1e1199fb9e171bf23aeccdc04efa4ebd288c16ce9506ef51cd
 
 build:
   number: 0
