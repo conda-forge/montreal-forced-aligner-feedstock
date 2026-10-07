@@ -11,7 +11,7 @@ source:
   sha256: 421f8cf3f619c9ec0f74ba695429cdf0112e055d82ca2d9f81c5771e6a8abf85
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -46,7 +46,7 @@ requirements:
     - kneed
     - pgvector
     - pgvector-python
-    - postgresql
+    - postgresql <18.0
     - sqlite
     - hdbscan
     - psycopg2
